@@ -58,16 +58,21 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 				<main className="timeline">
 					<div className="timeline-header">
 						Home
-						<Sparkle size={32} color="#0d0c0c" weight="regular" />
-						<form className="new-tweet-form">
-							<label htmlFor="tweet">
-								<img
-									src="https://avatars.githubusercontent.com/u/55026292?v=4"
-									alt="profile tweet"
-								/>
-							</label>
-						</form>
+						<Sparkle size={32} color="#1da1f2" weight="regular" />
 					</div>
+					<form className="new-tweet-form">
+						<label htmlFor="tweet">
+							<img
+								src="https://avatars.githubusercontent.com/u/55026292?v=4"
+								alt="profile tweet"
+							/>
+							<textarea
+								id="tweet"
+								placeholder="What's happening?"
+							></textarea>
+						</label>
+						<button type="submit">Tweet</button>
+					</form>
 				</main>
 			</div>
 		</div>
