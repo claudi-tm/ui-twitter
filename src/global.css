@@ -63,6 +63,7 @@ a {
     font-weight: 900;
     border: 0;
 }
+
 .sidebar .new-tweet:hover {
     background-color: var(--twitter-blue-hover);
     /* or */
@@ -97,3 +98,4 @@ a {
     border-left: 1px solid #ebeef0;
     border-right: 1px solid #ebeef0;
 }
+

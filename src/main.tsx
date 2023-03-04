@@ -3,7 +3,17 @@ import ReactDOM from "react-dom/client";
 import { Tweet } from "./components/Tweet";
 import "./global.css";
 import twitterLogo from "./assets/Logo.svg";
-import { Bell, BookmarkSimple, DotsThreeCircle, EnvelopeSimple, FileText, Hash, House, User } from "phosphor-react";
+import {
+	Bell,
+	BookmarkSimple,
+	DotsThreeCircle,
+	EnvelopeSimple,
+	FileText,
+	Hash,
+	House,
+	Sparkle,
+	User,
+} from "phosphor-react";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
@@ -44,7 +54,22 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 					Tweet
 				</button>
 			</aside>
-			<div className="content">content</div>
+			<div className="content">
+				<main className="timeline">
+					<div className="timeline-header">
+						Home
+						<Sparkle size={32} color="#0d0c0c" weight="regular" />
+						<form className="new-tweet-form">
+							<label htmlFor="tweet">
+								<img
+									src="https://avatars.githubusercontent.com/u/55026292?v=4"
+									alt="profile tweet"
+								/>
+							</label>
+						</form>
+					</div>
+				</main>
+			</div>
 		</div>
 	</React.StrictMode>
 );
