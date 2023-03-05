@@ -14,6 +14,7 @@ import {
 	Sparkle,
 	User,
 } from "phosphor-react";
+import { Header } from "./components/Header";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
@@ -56,10 +57,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 			</aside>
 			<div className="content">
 				<main className="timeline">
-					<div className="timeline-header">
-						Home
-						<Sparkle size={32} color="#1da1f2" weight="regular" />
-					</div>
+					<Header title="Home"></Header>
 					<form className="new-tweet-form">
 						<label htmlFor="tweet">
 							<img
