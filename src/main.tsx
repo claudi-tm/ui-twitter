@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Tweet } from "./components/Tweet";
-import "./global.css";
+import "./styles/global.css";
 import twitterLogo from "./assets/Logo.svg";
 import {
 	Bell,
@@ -74,10 +74,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 						<button type="submit">Tweet</button>
 					</form>
 					<div className="separator"></div>
-					<Tweet></Tweet>
-					<Tweet></Tweet>
-					<Tweet></Tweet>
-					<Tweet></Tweet>
 				</main>
 			</div>
 		</div>
