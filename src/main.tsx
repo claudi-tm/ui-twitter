@@ -2,59 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Tweet } from "./components/Tweet";
 import "./styles/global.css";
-import twitterLogo from "./assets/Logo.svg";
-import {
-	Bell,
-	BookmarkSimple,
-	DotsThreeCircle,
-	EnvelopeSimple,
-	FileText,
-	Hash,
-	House,
-	Sparkle,
-	User,
-} from "phosphor-react";
+
 import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+
+const tweets = ["Meu primeiro tweet", "Teste", "Deu certo twittar"];
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
 		<div className="layout">
-			<aside className="sidebar">
-				<img className="logo" src={twitterLogo} alt="logo" />
-				<nav className="main-navigation">
-					<a href="" className="active">
-						<House size={32} weight="fill" /> Home
-					</a>
-					<a href="">
-						<Hash size={32} color="#0d0c0c" />
-						Explore
-					</a>
-					<a href="">
-						<Bell size={32} color="#0d0c0c" /> Notifications
-					</a>
-					<a href="">
-						<EnvelopeSimple size={32} color="#0d0c0c" /> Messages
-					</a>
-					<a href="">
-						<BookmarkSimple size={32} color="#0d0c0c" /> Bookmarks
-					</a>
-					<a href="">
-						<FileText size={32} color="#0d0c0c" />
-						Lists
-					</a>
-					<a href="">
-						<User size={32} color="#0d0c0c" />
-						Profile
-					</a>
-					<a href="">
-						<DotsThreeCircle size={32} color="#0d0c0c" />
-						More
-					</a>
-				</nav>
-				<button className="new-tweet" type="button">
-					Tweet
-				</button>
-			</aside>
+			<Sidebar></Sidebar>
 			<div className="content">
 				<main className="timeline">
 					<Header title="Home"></Header>
@@ -72,6 +29,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 						<button type="submit">Tweet</button>
 					</form>
 					<div className="separator"></div>
+					{tweets.map((tweet) => {
+						return <Tweet key={tweet} content={tweet}></Tweet>;
+					})}
 				</main>
 			</div>
 		</div>
