@@ -20,9 +20,6 @@ export function Sidebar() {
 				<NavLink to={"/"}>
 					<House size={32} weight="fill" /> Home
 				</NavLink>
-				{/* <a href="" className="active">
-					<House size={32} weight="fill" /> Home
-				</a> */}
 				<a href="">
 					<Hash size={32} color="#0d0c0c" />
 					Explore
