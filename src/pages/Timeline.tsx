@@ -1,10 +1,9 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import { RouterProvider } from "react-router-dom";
 import { Header } from "../components/Header";
 import { router } from "../components/Routes";
 import { Tweet } from "../components/Tweet";
 import "../styles/timeline.css";
-
 
 export function Timeline() {
 	const [newTweet, setNewTweet] = useState("");
@@ -17,9 +16,17 @@ export function Timeline() {
 	function createNewTweet(event: FormEvent) {
 		event.preventDefault();
 
-		setTweets([...tweets, newTweet]);
-		setNewTweet("")
+		setTweets([newTweet, ...tweets]);
+		setNewTweet("");
 	}
+
+	function handleHotKeySubmit(event: KeyboardEvent) {
+		if (event.key === "Enter" && event.ctrlKey) {
+			setTweets([newTweet, ...tweets]);
+			setNewTweet("");
+		}
+	}
+
 	return (
 		<main className="timeline">
 			<Header title="Home"></Header>
@@ -34,8 +41,9 @@ export function Timeline() {
 						id="tweet"
 						placeholder="What's happening?"
 						value={newTweet}
+						onKeyDown={handleHotKeySubmit}
 						onChange={(event) => {
-							setNewTweet(event.target.value)
+							setNewTweet(event.target.value);
 						}}
 					></textarea>
 				</label>
