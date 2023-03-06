@@ -5,19 +5,20 @@ import { router } from "../components/Routes";
 import { Tweet } from "../components/Tweet";
 import "../styles/timeline.css";
 
-let newTweet = "";
 
 export function Timeline() {
+	const [newTweet, setNewTweet] = useState("");
 	const [tweets, setTweets] = useState([
 		"Meu primeiro tweet",
 		"Teste",
 		"Deu certo twittar",
 	]);
-	
+
 	function createNewTweet(event: FormEvent) {
 		event.preventDefault();
 
 		setTweets([...tweets, newTweet]);
+		setNewTweet("")
 	}
 	return (
 		<main className="timeline">
@@ -32,8 +33,9 @@ export function Timeline() {
 					<textarea
 						id="tweet"
 						placeholder="What's happening?"
+						value={newTweet}
 						onChange={(event) => {
-							newTweet = event.target.value;
+							setNewTweet(event.target.value)
 						}}
 					></textarea>
 				</label>
