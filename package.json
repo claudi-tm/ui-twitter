@@ -3,13 +3,10 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module", 
-	"homepage": "https://claudi-tm.github.io/ui-twitter",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"localforage": "^1.10.0",
