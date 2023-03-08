@@ -1,5 +1,5 @@
 import { Outlet, RouterProvider } from "react-router-dom";
-import { router } from "../components/Routes";
+import { router } from "../components/routes";
 import { Sidebar } from "../components/Sidebar";
 import "../styles/default.css";
 

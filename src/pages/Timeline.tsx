@@ -1,7 +1,7 @@
 import { FormEvent, KeyboardEvent, useState } from "react";
 import { RouterProvider } from "react-router-dom";
 import { Header } from "../components/Header";
-import { router } from "../components/Routes";
+import { router } from "../components/routes";
 import { Tweet } from "../components/Tweet";
 import "../styles/timeline.css";
 
