@@ -2,8 +2,8 @@
 	"name": "ui-twitter",
 	"private": true,
 	"version": "0.0.0",
-	"type": "module",
-	"homepage": "https://github.com/claudi-tm/ui-twitter",
+	"type": "module", 
+	"homepage": "https://claudi-tm.github.io/ui-twitter",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
