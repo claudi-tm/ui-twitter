@@ -6,4 +6,9 @@ Desafio proposto pela Rocketseat construção de da UI do twitter
 - React JS
 - Vite
 - Typescript
- ###  [Preview](https://ui-twitter-taupe.vercel.app/)
+
+## Funcionalidades
+- Ver twittes
+- Criar twitt
+- Responder twitts
+ ####  [Preview](https://ui-twitter-taupe.vercel.app/)
